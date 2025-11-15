@@ -1,0 +1,42 @@
+.cover {
+  margin-top: adapter(190px);
+
+	&__heading {
+    margin-bottom: adapter(93px);
+
+    max-width: 890px;
+    width: 100%;
+    text-align: center;
+	}
+
+  &__container {
+    @include glow-r-t(250px, -150px, 8s, 0s);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    
+    position: relative;
+    overflow: visible;
+  }
+  
+  &__button{
+    padding: 25px 33px 25px 40px;
+    width: 242px;
+
+    text-transform: uppercase;
+  }
+}
+
+@media(max-width:1000px){
+  .cover {
+    &__button{
+      padding: 17px 20px 17px 20px;
+      width: 181px;
+      height: min-content;
+
+      text-transform: uppercase;
+    }
+  }
+}

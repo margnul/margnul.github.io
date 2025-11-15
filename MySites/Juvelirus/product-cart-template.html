@@ -1,0 +1,44 @@
+<div class="cart__product">
+  <div class="cart__product-wrapper">
+
+    <div class="cart__product-image-wrapper">
+      <a href="./product.html?id={id}">
+        <!-- <img src="./images/products/product{id}.jpg" alt="" class="cart__product-image" loading="eager"> -->
+        <img
+          src="./images/products/product{id}-700.jpg"
+          alt="" class="product-card__image"
+          srcset="./images/products/product{id}-100.jpg 100w,
+                  ./images/products/product{id}-300.jpg 300w,
+                  ./images/products/product{id}-700.jpg 700w,
+                  ./images/products/product{id}-1000.jpg 1000w"
+          sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 30vw,
+                (max-width: 1023px) 35vw,
+                35vw"
+          fetchpriority="high"
+        >
+      </a>
+    </div>
+
+    <div class="cart__product-title">
+      <p class="cart__product-brand">{brand}</p>
+      <p class="cart__product-name">{name}</p>
+    </div>
+
+    <p class="cart__product-price">{price}</p>
+
+    <div class="cart__product-delete-button-wrapper">
+      <button class="cart__product-delete-button button" type="button" data-js-cart-delete-button>Удалить</button>
+    </div>
+
+    <div class="cart__product-delete-confirmation" data-js-cart-product-delete-confirmation>
+      <p>Вы точно хотите удалить товар?</p>
+      <div class="cart__product-delete-confirmation-buttons-wrapper">
+        <button class="cart__product-delete-button-confirm button" type="button"
+          data-js-cart-product-delete-confirmation-confirm>Удалить</button>
+        <button class="cart__product-delete-button-cancel button" type="button"
+          data-js-cart-product-delete-confirmation-cancel>Отмена</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+@import 
+      './variables',
+      'utils',
+      'normalize',
+      'mixins',
+      'globals';
+
+@import './blocks/header',
+        './blocks/footer',
+        './blocks/cover',
+        './blocks/about-me-cover',
+        './blocks/projests-highlight',
+        './blocks/testimonial',
+        './blocks/page-heading',
+        './blocks/works',
+        './blocks/mission',
+        './blocks/follow-me',
+        './blocks/contact-us',
+        './blocks/contacts-with-image',
+        './blocks/project',
+        './blocks/other-projects'

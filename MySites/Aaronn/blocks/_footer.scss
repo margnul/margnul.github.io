@@ -1,0 +1,131 @@
+.footer {
+   //padding-top: 100px;
+   padding-bottom: adapter(80px);
+   background-color: #131313;
+
+		&__container {
+         background-color: transparent;
+
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: start;
+		}
+
+		&__logo {
+         min-width: 240px;
+         //width: 32%;
+         width: min-content;
+         height: 42px;
+		}
+
+		&__adress {
+         max-width: 285px;
+         //width: 32%;
+         width: min-content;
+         height: adapter(135px);
+
+         text-wrap: nowrap;
+         line-height: 1.2;
+         font: {
+            family: "Syne", sans-serif;
+            weight: bold;
+         }
+		}
+
+		&__contacts {
+         max-width: 285px;
+         //width: 32%;
+         width: min-content;
+         //height: 135px;
+         text-wrap: nowrap;
+         height: max-content;
+		}
+
+		&__number {
+         margin-bottom: 10px;
+         font: {
+            family: "Syne", sans-serif;
+            weight: bold;
+         }
+		}
+
+		&__socials {
+         display: flex;
+         gap: 10px;
+		}
+
+		&__social-link {
+         display: block;
+         width: 27px;
+         height: 24px;
+		}
+
+		&__rights {
+         margin-top: 70px;
+         width: 100%;
+         text-align: center;
+         position: relative;
+
+         &::before{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #FFFFFF;
+            position: absolute;
+            left: 0;
+            top: -36px;
+         }
+		}
+}
+
+.get-in-touch {
+   width: 100%;
+   margin-top: adapter(100px);
+   margin-bottom: adapter(190px);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+
+
+		&__title {
+         margin-bottom: 23px;
+         max-width: 430px;
+         width: 100%;
+         color: var(--brand-color);
+         font: {
+            family: "Syne", sans-serif;
+            weight: bold;
+         }
+         text-align: center;
+		}
+
+		&__email {
+         max-width: 950px;
+         width: 100%;
+         text-wrap: wrap;
+         text-align: center;
+         text-transform:lowercase ;
+         text-decoration: underline;
+         opacity: 1;
+         font: {
+            family: "Syne", sans-serif;
+            size: 64px;
+            size:clamp(20px, 1.7vw + 20px, 64px);
+            weight: bold;
+         }
+		}
+}
+
+@media(max-width: 720px){
+   .footer {
+
+		&__container {
+         flex-direction: column;
+         gap: 20px;
+         justify-content: start;
+         align-items: center;
+		}
+   }
+}

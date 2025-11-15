@@ -1,0 +1,73 @@
+.testimonial {
+    margin-top: adapter(166px);
+    margin-bottom: adapter(120px);
+    //height: 420px;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    
+
+		&__container {
+      position: relative;
+
+      @include glow-l-t(-250px, -50px, 4s, 2s);
+		}
+
+		&__heading {
+      margin-top: adapter(90px);
+      font-weight: bold;
+		}
+
+    &__desc {
+      margin-top: 44px;
+      max-width: 880px;
+      width: 100%;
+      color: #949494;
+    }
+
+    &__author {
+      margin-top: 40px;
+
+      font: {
+        size:24px;
+        family: "Syne", sans-serif;
+        weight: bold;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      right: 150px;
+      top: 60px;
+		}
+}
+
+@media (max-width: 750px) {
+  .testimonial {
+
+		&__container {
+
+		}
+
+		&__heading {
+
+		}
+
+    &__desc {
+      //text-align:inherit;
+    }
+
+    &__author {
+
+
+      font: {
+
+      }
+    }
+
+    &__img {
+      display: none;
+		}
+}
+}
