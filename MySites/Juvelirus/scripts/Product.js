@@ -42,12 +42,25 @@ class Product{
     this.productDetailsElement.innerHTML = materials
     this.productDescriptionElement.innerHTML = description
     this.productPriceElement.innerHTML = price
-    this.productImageElements.forEach((productImageElement) => {
-      productImageElement.setAttribute('src', image)
-      productImageElement.setAttribute('srcset', srcset)
-      productImageElement.setAttribute('sizes', "(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1023px) 50vw, 35vw")
-    })
+    // this.productImageElements.forEach((productImageElement) => {
+    //   productImageElement.setAttribute('src', image)
+    //   productImageElement.setAttribute('srcset', srcset)
+    //   productImageElement.setAttribute('sizes', "(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1023px) 50vw, 35vw")
+    // })
     this.pageTitleElement.innerHTML = brand + " - " + name
+
+    this.productImageElements.forEach((picture) => {
+      picture.querySelectorAll('source, img').forEach((el) => {
+        ['src', 'srcset'].forEach((attr) => {
+          if (el.hasAttribute(attr)) {
+            el.setAttribute(
+              attr,
+              el.getAttribute(attr).replaceAll('{id}', this.productId)
+            );
+          }
+        });
+      });
+    });
   }
 
   bindEvents() {

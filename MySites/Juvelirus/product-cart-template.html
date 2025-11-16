@@ -4,7 +4,7 @@
     <div class="cart__product-image-wrapper">
       <a href="./product.html?id={id}">
         <!-- <img src="./images/products/product{id}.jpg" alt="" class="cart__product-image" loading="eager"> -->
-        <img
+        <!-- <img
           src="./images/products/product{id}-700.jpg"
           alt="" class="product-card__image"
           srcset="./images/products/product{id}-100.jpg 100w,
@@ -16,7 +16,60 @@
                 (max-width: 1023px) 35vw,
                 35vw"
           fetchpriority="high"
-        >
+        > -->
+        <picture>
+          <!-- AVIF -->
+          <source
+            type="image/avif"
+            srcset="
+              ./images/products/product{id}/product{id}-100.avif 100w,
+              ./images/products/product{id}/product{id}-300.avif 300w,
+              ./images/products/product{id}/product{id}-700.avif 700w,
+              ./images/products/product{id}/product{id}-1000.avif 1000w
+            "
+            sizes="(max-width: 480px) 100vw,
+                  (max-width: 768px) 30vw,
+                  (max-width: 1023px) 35vw,
+                  35vw"
+          >
+
+          <!-- WebP -->
+          <source
+            type="image/webp"
+            srcset="
+              ./images/products/product{id}/product{id}-100.webp 100w,
+              ./images/products/product{id}/product{id}-300.webp 300w,
+              ./images/products/product{id}/product{id}-700.webp 700w,
+              ./images/products/product{id}/product{id}-1000.webp 1000w
+            "
+            sizes="(max-width: 480px) 100vw,
+                  (max-width: 768px) 30vw,
+                  (max-width: 1023px) 35vw,
+                  35vw"
+          >
+
+          <!-- JPEG fallback -->
+          <img
+            src="./images/products/product{id}/product{id}-700.jpg"
+            srcset="
+              ./images/products/product{id}/product{id}-100.jpg 100w,
+              ./images/products/product{id}/product{id}-300.jpg 300w,
+              ./images/products/product{id}/product{id}-700.jpg 700w,
+              ./images/products/product{id}/product{id}-1000.jpg 1000w
+            "
+            sizes="(max-width: 480px) 100vw,
+                  (max-width: 768px) 30vw,
+                  (max-width: 1023px) 35vw,
+                  35vw"
+            alt=""
+            class="product-card__image"
+            width="700" height="700"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="high"
+          >
+        </picture>
+
       </a>
     </div>
 

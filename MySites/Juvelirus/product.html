@@ -87,7 +87,48 @@
           <div class="section__body product__wrapper">
             <div class="product__image-wrapper">
               <a href="#modal-1">
-                <img src="./images/products/product1.jpg" alt="" class="product__image" loading="eager" fetchpriority="high"  data-js-product-image>
+                <!-- <img src="./images/products/product1.jpg" alt="" class="product__image" loading="eager" fetchpriority="high"  data-js-product-image> -->
+                 
+                 <picture data-js-product-image>
+                  <!-- AVIF -->
+                  <source
+                    type="image/avif"
+                    srcset="
+                      ./images/products/product{id}/product{id}-300.avif 300w,
+                      ./images/products/product{id}/product{id}-700.avif 700w,
+                      ./images/products/product{id}/product{id}-1000.avif 1000w
+                    "
+                    sizes="100vw"
+                  >
+
+                  <!-- WebP -->
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/products/product{id}/product{id}-300.webp 300w,
+                      ./images/products/product{id}/product{id}-700.webp 700w,
+                      ./images/products/product{id}/product{id}-1000.webp 1000w
+                    "
+                    sizes="100vw"
+                  >
+
+                  <!-- JPEG fallback -->
+                  <img
+                    src="./images/products/product{id}/product{id}-700.jpg"
+                    srcset="
+                      ./images/products/product{id}/product{id}-300.jpg 300w,
+                      ./images/products/product{id}/product{id}-700.jpg 700w,
+                      ./images/products/product{id}/product{id}-1000.jpg 1000w
+                    "
+                    sizes="100vw"
+                    alt=""
+                    class="product__image"
+                    width="1000" height="1000"
+                    loading="eager"
+                    fetchpriority="high"
+                  >
+                </picture>
+
               </a>
             </div>
             <div class="product__title">
@@ -117,7 +158,48 @@
       <a href="#" class="modal__close-background"></a>
       <div class="modal__content">
         <a href="#" class="modal__close" >&times;</a>
-        <img src="./images/products/product1.jpg" alt="Увеличенное изображение" class="modal__image" data-js-product-image>
+        <!-- <img src="./images/products/product1.jpg" alt="Увеличенное изображение" class="modal__image" data-js-product-image> -->
+
+        <picture data-js-product-image>
+          <!-- AVIF -->
+          <source
+            type="image/avif"
+            srcset="
+              ./images/products/product{id}/product{id}-300.avif 300w,
+              ./images/products/product{id}/product{id}-700.avif 700w,
+              ./images/products/product{id}/product{id}-1000.avif 1000w
+            "
+            sizes="100vw"
+          >
+
+          <!-- WebP -->
+          <source
+            type="image/webp"
+            srcset="
+              ./images/products/product{id}/product{id}-300.webp 300w,
+              ./images/products/product{id}/product{id}-700.webp 700w,
+              ./images/products/product{id}/product{id}-1000.webp 1000w
+            "
+            sizes="100vw"
+          >
+
+          <!-- JPEG fallback -->
+          <img
+            src="./images/products/product{id}/product{id}-700.jpg"
+            srcset="
+              ./images/products/product{id}/product{id}-300.jpg 300w,
+              ./images/products/product{id}/product{id}-700.jpg 700w,
+              ./images/products/product{id}/product{id}-1000.jpg 1000w
+            "
+            sizes="100vw"
+            alt=""
+            class="product__image"
+            width="1000" height="1000"
+            loading="eager"
+            fetchpriority="high"
+          >
+        </picture>
+
       </div>
       
     </div>
