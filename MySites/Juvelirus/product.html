@@ -68,7 +68,7 @@
    <link rel="preload" href="./styles/pages/product/product.css" as="style" onload="this.rel='stylesheet'">
   
 </head>
-<body>
+<body data-page="product">
   
   <header class="header">
     <div class="header__top container">
@@ -216,10 +216,10 @@
     <div id="modal-1" class="modal">
       <a href="#" class="modal__close-background"></a>
       <div class="modal__content">
-        <a href="#" class="modal__close" >&times;</a>
+        <!-- <a href="#" class="modal__close" >&times;</a> -->
         <!-- <img src="./images/products/product1.jpg" alt="Увеличенное изображение" class="modal__image" data-js-product-image> -->
 
-        <picture data-js-product-image>
+        <picture class="modal__image" data-js-product-image>
           <!-- AVIF -->
           <source
             type="image/avif"
@@ -228,7 +228,7 @@
               ./images/products/product{id}/product{id}-700.avif 700w,
               ./images/products/product{id}/product{id}-1000.avif 1000w
             "
-            sizes="100vw"
+            sizes="(max-height: 600px) 90vh, 80vw"
           >
 
           <!-- WebP -->
@@ -239,7 +239,7 @@
               ./images/products/product{id}/product{id}-700.webp 700w,
               ./images/products/product{id}/product{id}-1000.webp 1000w
             "
-            sizes="100vw"
+            sizes="(max-height: 600px) 90vh, 80vw"
           >
 
           <!-- JPEG fallback -->
@@ -250,12 +250,10 @@
               ./images/products/product{id}/product{id}-700.jpg 700w,
               ./images/products/product{id}/product{id}-1000.jpg 1000w
             "
-            sizes="100vw"
+            sizes="(max-height: 600px) 90vh, 80vw"
             alt=""
             class="product__image"
-            width="1000" height="1000"
-            loading="eager"
-            fetchpriority="high"
+            style="max-width: 100%; max-height: 95vh; width: auto; height: auto; object-fit: contain;"
           >
         </picture>
 
