@@ -14,6 +14,20 @@
   }
 }
 
+.button{
+  background-color: transparent;
+  border: none;
+
+  &--accent{
+    font-family: var(--font-family-base);
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    padding: rem(5);
+    color: var(--color-white);
+    background-color: var(--color-dark-10);
+  }
+}
+
 .visually-hidden {
   @include visually-hidden;
 }

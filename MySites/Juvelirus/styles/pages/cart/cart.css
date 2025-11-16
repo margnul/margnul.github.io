@@ -199,49 +199,49 @@ svg * {
 }
 @font-face {
   font-family: "Kumbh Sans";
-  src: url("../fonts/KumbhSans-VariableFont_YOPQ,wght.ttf") format("ttf");
+  src: url("../../../fonts/KumbhSans-VariableFont_YOPQ,wght.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-ExtraLight.woff2") format("woff2");
+  src: url("../../../fonts/Inter-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Light.woff2") format("woff2");
+  src: url("../../../fonts/Inter-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  src: url("../../../fonts/Inter-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  src: url("../../../fonts/Inter-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  src: url("../../../fonts/Inter-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+  src: url("../../../fonts/Inter-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -542,103 +542,6 @@ button[aria-label]::before {
   font-weight: 200;
 }
 
-.product-card {
-  position: relative;
-}
-.product-card__image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.product-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
-}
-.product-card__link {
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-@media (hover: none) and (pointer: coarse) {
-  .product-card__link {
-    color: inherit;
-  }
-  .product-card__link .product-card__about {
-    transform: translateY(-10px);
-  }
-  .product-card__link .product-card__details {
-    transform: translateY(0px);
-  }
-}
-@media (any-hover: hover) {
-  .product-card__link:hover {
-    color: inherit;
-  }
-  .product-card__link:hover .product-card__about {
-    transform: translateY(-10px);
-  }
-  .product-card__link:hover .product-card__details {
-    transform: translateY(0px);
-  }
-}
-@media (any-hover: none) {
-  .product-card__link:active {
-    color: inherit;
-  }
-  .product-card__link:active .product-card__about {
-    transform: translateY(-10px);
-  }
-  .product-card__link:active .product-card__details {
-    transform: translateY(0px);
-  }
-}
-.product-card__wrapper {
-  --catalog-columns: 3;
-  padding: 0.9375rem;
-  display: grid;
-  grid-template-columns: repeat(var(--catalog-columns), 1fr);
-  -moz-column-gap: 0.3125rem;
-       column-gap: 0.3125rem;
-  row-gap: 2.5rem;
-}
-@media (width <= 63.99875rem) {
-  .product-card__wrapper {
-    --catalog-columns: 2;
-  }
-}
-@media (width <= 47.99875rem) {
-  .product-card__wrapper {
-    --catalog-columns: 1;
-  }
-}
-.product-card__name, .product-card__price {
-  font-weight: 600;
-}
-.product-card__about {
-  position: relative;
-  margin-top: -5.625rem;
-  padding-top: 5rem;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4666666667) 20%, rgba(255, 255, 255, 0.6666666667) 40%, #ffffff);
-  transition-duration: 0.4s;
-  transform: translateY(calc(100% - 160px));
-}
-.product-card__title {
-  margin-bottom: 0.9375rem;
-}
-.product-card__materials {
-  margin-bottom: 1.5625rem;
-}
-.product-card__title, .product-card__details {
-  transition-duration: 0.4s;
-  text-align: center;
-  transform: translateY(10px);
-}
-
 .footer__wrapper {
   margin-top: 6.25rem;
   margin-bottom: 1.25rem;
@@ -821,203 +724,4 @@ button[aria-label]::before {
   border: none;
   background-color: transparent;
   border-bottom: 1px solid var(--color-dark);
-}
-
-.about-us__wrapper {
-  padding-top: 2.5rem;
-}
-.about-us__image {
-  width: 100%;
-}
-.about-us__image-wrapper {
-  display: flex;
-  padding-top: 0.5rem;
-  justify-content: center;
-  align-items: start;
-}
-@media (width <= 63.99875rem) {
-  .about-us__image-wrapper {
-    margin-bottom: 0.625rem;
-  }
-}
-.about-us__card {
-  padding: 1.25rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
-}
-@media (width > 63.99875rem) {
-  .about-us__card:nth-child(even) :first-child {
-    order: 1;
-  }
-}
-@media (width <= 63.99875rem) {
-  .about-us__card {
-    grid-template-columns: none;
-  }
-}
-.about-us__return-link {
-  display: block;
-  text-align: center;
-}
-.about-us__return-link-wrapper {
-  padding-block: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.product__name {
-  font-weight: 600;
-}
-.product__price {
-  font-weight: 700;
-}
-.product__wrapper {
-  padding: clamp(0.625rem, 0.306372549rem + 1.3071895425vw, 1.875rem);
-  display: grid;
-  row-gap: clamp(1.875rem, 1.0784313725rem + 3.2679738562vw, 5rem);
-  -moz-column-gap: clamp(1.875rem, 1.0784313725rem + 3.2679738562vw, 5rem);
-       column-gap: clamp(1.875rem, 1.0784313725rem + 3.2679738562vw, 5rem);
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "img img title details" "img img desc desc" "img img - buy";
-}
-@media (width <= 63.99875rem) {
-  .product__wrapper {
-    grid-template-areas: "img img img title" "img img img details" "desc desc desc buy";
-  }
-}
-@media (width <= 47.99875rem) {
-  .product__wrapper {
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "img img " "img img" "title details" "desc desc" "buy buy";
-  }
-}
-.product__title {
-  grid-area: title;
-}
-@media (width <= 63.99875rem) {
-  .product__title {
-    align-self: end;
-  }
-}
-@media (width <= 47.99875rem) {
-  .product__title {
-    align-self: start;
-  }
-}
-.product__details {
-  grid-area: details;
-}
-.product__image-wrapper {
-  grid-area: img;
-}
-@media (width <= 47.99875rem) {
-  .product__image-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .product__image-wrapper a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .product__image-wrapper img {
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
-    max-width: 300px;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-}
-.product__description {
-  grid-area: desc;
-}
-@media (width <= 63.99875rem) {
-  .product__description {
-    justify-self: center;
-    align-self: center;
-  }
-}
-.product__buy-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  row-gap: 0.625rem;
-  flex-direction: column;
-  grid-area: buy;
-}
-.product__buy-wrapper p {
-  text-align: center;
-}
-.product__buy-button {
-  width: 20vw;
-  max-width: min(500px, 100%);
-}
-.product__buy-button.is-active {
-  color: var(--color-accent);
-  background-color: var(--color-gray-60);
-}
-@media (width <= 47.99875rem) {
-  .product__buy-button {
-    width: 50vw;
-  }
-}
-
-/* Скрываем модальное окно по умолчанию */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 100;
-  justify-content: center;
-  align-items: center;
-}
-.modal:target {
-  display: flex;
-}
-.modal__content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  z-index: 90;
-}
-.modal__image {
-  max-width: 100%;
-  max-height: 80vh;
-  display: block;
-  margin: 0 auto;
-}
-.modal__close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: var(--color-dark);
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.modal__close:hover {
-  color: var(--color-accent);
-}
-.modal__close-background {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 50;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=cart.css.map */
