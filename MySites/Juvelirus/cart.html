@@ -5,9 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cli | Корзина</title>
   <link rel="icon" type="image/icon" href="./icons/icon256.ico" />
+
+  <style>
+    
+    .header {
+      margin-top: 2.5rem;
+      margin-bottom: 8.75rem;
+    }
+    .header__top {
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: start;
+    }
+    .header__logo-image {
+      width: 6.25rem;
+      height: auto;
+    }
+    @media (any-hover: hover) {
+      .header__logo-link:hover {
+        color: inherit;
+      }
+    }
+    @media (any-hover: none) {
+      .header__logo-link:active {
+        color: inherit;
+      }
+    }
+    .header__menu-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: start;
+      -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+    }
+    .header__menu-link {
+      font-weight: 100;
+      display: block;
+      text-decoration: none;
+      transition-duration: 0.4s;
+    }
+    @media (any-hover: hover) {
+      .header__menu-link:hover {
+        opacity: 0.6;
+      }
+    }
+    @media (any-hover: none) {
+      .header__menu-link:active {
+        opacity: 0.6;
+      }
+    }
+    .header__menu-link.is-active {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+  </style>
+
   <!-- <link rel="stylesheet" href="./styles/main.min.css"> -->
-   <link rel="stylesheet" href="./styles/pages/cart/cart.css">
-  <script src="./scripts/main.js" type="module"></script>
+   <!-- <link rel="stylesheet" href="./styles/pages/cart/cart.css"> -->
+   <link rel="preload" href="./styles/pages/cart/cart.css" as="style" onload="this.rel='stylesheet'">
+  
 </head>
 <body data-js-body-element>
   
@@ -181,6 +240,8 @@
     </form>
   
   </section>
+
+  <script src="./scripts/main.js" type="module"></script>
 
 </body>
 </html>
